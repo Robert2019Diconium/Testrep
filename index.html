@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fuhrpark Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-mark">VWFS</div>
+        <nav>
+          <button class="icon">☰</button>
+          <button class="icon active">🏠</button>
+          <button class="icon">🚘</button>
+          <button class="icon">🗂️</button>
+          <button class="icon">📈</button>
+          <button class="icon">⚙️</button>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="title-group">
+            <h1>Volkswagen Financial Services</h1>
+            <p>Dashboard</p>
+          </div>
+          <div class="top-actions">
+            <input type="search" placeholder="Suche nach Fahrzeugen, Verträgen…" />
+            <button>Bearbeitungsmodus</button>
+          </div>
+        </header>
+
+        <section class="metrics-grid">
+          <article class="card metric">
+            <h3>Anzahl Fahrzeuge</h3>
+            <strong>66</strong>
+          </article>
+          <article class="card metric">
+            <h3>Anzahl Verträge</h3>
+            <strong>66</strong>
+          </article>
+          <article class="card metric">
+            <h3>Anzahl aktive Fahrer</h3>
+            <strong>76</strong>
+          </article>
+          <article class="card metric">
+            <h3>Verträge mit Fahrleistungsabweichungen</h3>
+            <strong>57</strong>
+          </article>
+          <article class="card metric">
+            <h3>UVV überfällig</h3>
+            <strong>35</strong>
+          </article>
+          <article class="card metric">
+            <h3>Auslaufende Leasingverträge</h3>
+            <strong>31</strong>
+          </article>
+        </section>
+
+        <section class="metrics-grid small">
+          <article class="card metric compact">
+            <h3>Fahrzeuge mit unausiblen KM‑Ständen</h3>
+            <small>der letzten 90 Tage</small>
+            <strong>2</strong>
+          </article>
+          <article class="card metric compact">
+            <h3>Nicht zugeordnete Tankkarten</h3>
+            <strong>0</strong>
+          </article>
+          <article class="card metric compact">
+            <h3>Anzahl offene Schäden</h3>
+            <strong>3</strong>
+          </article>
+          <article class="card metric compact">
+            <h3>Termine</h3>
+            <small>nächste 21 Tage</small>
+            <strong>0</strong>
+          </article>
+        </section>
+
+        <section class="board-grid">
+          <article class="card chart wide">
+            <h2>Kostenentwicklung</h2>
+            <div class="bar-list">
+              <div><span>Jan</span><i style="--w:78%">47.659,99 EUR</i></div>
+              <div><span>Feb</span><i style="--w:72%">42.931,63 EUR</i></div>
+              <div><span>Mär</span><i style="--w:75%">44.268,66 EUR</i></div>
+              <div><span>Apr</span><i style="--w:100%">59.082,75 EUR</i></div>
+              <div><span>Mai</span><i style="--w:92%">54.802,84 EUR</i></div>
+              <div><span>Jun</span><i style="--w:70%">41.874,00 EUR</i></div>
+            </div>
+            <p class="muted">Summe: 288.178,31 EUR in den letzten 6 Monaten.</p>
+          </article>
+
+          <article class="card chart">
+            <h2>Fällige UVV‑Prüfungen</h2>
+            <div class="columns">
+              <span style="--h:70%; --c:#72204f"></span>
+              <span style="--h:8%; --c:#e0b41d"></span>
+              <span style="--h:3%; --c:#d8c8aa"></span>
+              <span style="--h:2%; --c:#7aa140"></span>
+            </div>
+            <p class="muted">Überfällig, in 0‑3, 3‑6 und 6‑12 Wochen.</p>
+          </article>
+
+          <article class="card chart">
+            <h2>Fahrzeugbestand</h2>
+            <svg viewBox="0 0 360 140" role="img" aria-label="Linienchart Fahrzeugbestand">
+              <polyline points="20,80 60,84 100,78 140,82 180,77 220,74 260,79 300,83 340,80" />
+              <g class="points">
+                <circle cx="20" cy="80" r="4" />
+                <circle cx="60" cy="84" r="4" />
+                <circle cx="100" cy="78" r="4" />
+                <circle cx="140" cy="82" r="4" />
+                <circle cx="180" cy="77" r="4" />
+                <circle cx="220" cy="74" r="4" />
+                <circle cx="260" cy="79" r="4" />
+                <circle cx="300" cy="83" r="4" />
+                <circle cx="340" cy="80" r="4" />
+              </g>
+            </svg>
+            <p class="muted">Anzahl der aktiven Fahrzeuge der letzten 9 Monate.</p>
+          </article>
+
+          <article class="card chart wide">
+            <h2>Auslaufende Leasingverträge</h2>
+            <div class="columns">
+              <span style="--h:20%; --c:#72204f"></span>
+              <span style="--h:30%; --c:#d4a800"></span>
+              <span style="--h:60%; --c:#dbcba8"></span>
+              <span style="--h:62%; --c:#abc7d2"></span>
+              <span style="--h:68%; --c:#87a63f"></span>
+            </div>
+            <p class="muted">Überfällig, in 0‑3, 3‑6, 6‑9 und 9‑12 Monaten.</p>
+          </article>
+
+          <article class="card chart">
+            <h2>Gesamtkosten 05/2025</h2>
+            <div class="pie" aria-hidden="true"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
